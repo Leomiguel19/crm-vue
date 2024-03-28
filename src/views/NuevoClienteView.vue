@@ -1,4 +1,5 @@
 <script setup>
+    // import {reactive} from 'vue'
     import { FormKit } from '@formkit/vue'
     import RouterLink from "../components/UI/RouterLink.vue"
     import Heading from "../components/UI/Heading.vue"
@@ -8,6 +9,15 @@
             type: String,
         }
     })
+
+    // const formData = reactive({
+    //     nombre: "Leonardo",
+    //     apellido: "Guilarte",
+    //     email: "leomiguel1907@gmail.com",
+    //     telefono: "+58 412-095-0165",
+    //     empresa: "MaiaHR",
+    //     puesto: "Desarrollador Full Stack",
+    // })
 
     const handleSubmit = (data) => {
         console.log(data)
@@ -31,6 +41,7 @@
                     :incomplete-message=false
                     @submit="handleSubmit"
                 > 
+                    <!-- :value="formData" -->
                     <FormKit
                         type="text"
                         label="Nombre"
