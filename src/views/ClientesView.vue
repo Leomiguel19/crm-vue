@@ -7,7 +7,7 @@
     const clientes = ref([]);
 
     onMounted(() => {
-        axios.get('http://localhost:4000/clientes')
+        axios('http://localhost:4000/clientes')
             .then(({data}) => clientes.value = data)
             .catch(error => console.log("Hubo un error"))
     })
