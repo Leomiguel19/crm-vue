@@ -2,8 +2,12 @@
     // import {reactive} from 'vue'
     import axios from "axios"
     import { FormKit } from '@formkit/vue'
+    import {useRouter, useRoute} from 'vue-router'
     import RouterLink from "../components/UI/RouterLink.vue"
     import Heading from "../components/UI/Heading.vue"
+
+    const route = useRoute()
+    const router = useRouter()
 
     defineProps({
         titulo:{
@@ -24,6 +28,7 @@
         axios.post('http://localhost:4000/clientes', data)
             .then(response => {
                 // Redireccionar
+                router.push({name: 'inicio'})
             })
             .catch(error => console.log(error))
     }
