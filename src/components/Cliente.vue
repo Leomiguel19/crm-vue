@@ -8,6 +8,8 @@
         }
     })
 
+    defineEmits(['actualizarEstado'])
+
     const nombreCliente = computed(() => {
         return props.cliente.nombre + ' ' + props.cliente.apellido
     })
@@ -30,6 +32,7 @@
             <button
                 class="inline-flex rounded-md px-2 text-xs font-semibold leading-8"
                 :class="[estadoCliente ? 'bg-green-200 text-green-800' : 'bg-red-200 text-red-800']"
+                @click="$emit('actualizarEstado', {id: cliente.id, estado: cliente.estado})"
             >
                 {{ estadoCliente ? 'Activo' : 'Inactivo' }}
             </button>
