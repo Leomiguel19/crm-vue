@@ -11,6 +11,10 @@
     const nombreCliente = computed(() => {
         return props.cliente.nombre + ' ' + props.cliente.apellido
     })
+
+    const estadoCliente = computed(() => {
+        return props.cliente.estado
+    })
 </script>
 <template>
     <tr>
@@ -23,7 +27,12 @@
             <p class="text-gray-600">{{ cliente.puesto }}</p>
         </td>
         <td class="whitespace-nowrap px-3 py-4 text-sm">
-
+            <button
+                class="inline-flex rounded-md px-2 text-xs font-semibold leading-8"
+                :class="[estadoCliente ? 'bg-green-200 text-green-800' : 'bg-red-200 text-red-800']"
+            >
+                {{ estadoCliente ? 'Activo' : 'Inactivo' }}
+            </button>
         </td>
         <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500 ">
             <RouterLink
