@@ -1,12 +1,34 @@
 {
-    "clientes": [
-        {
-            "id": 1,
-            "nombre": "Leonardo"
-        },
-        {
-            "id": 2,
-            "nombre": "Alejandro"
-        }
-    ]
+  "clientes": [
+    {
+      "nombre": "Leonardo edit",
+      "apellido": "Guilarte",
+      "email": "leomiguel1907@gmail.com",
+      "telefono": "+58 412-095-0165",
+      "empresa": "MaiaHR",
+      "puesto": "Desarrollador Full Stack",
+      "id": "3209",
+      "estado": true
+    },
+    {
+      "id": "984c",
+      "nombre": "Jose",
+      "apellido": "Diaz",
+      "email": "josediaz@gmail.com",
+      "telefono": "+57 441-444-9999",
+      "empresa": "SomosSis",
+      "puesto": "Analista",
+      "estado": 0
+    },
+    {
+      "id": "db1e",
+      "nombre": "Pedro",
+      "apellido": "Perez",
+      "email": "peperes1234@email.com",
+      "telefono": "412-097-9900",
+      "empresa": "Alegra",
+      "puesto": "DeVops",
+      "estado": 1
+    }
+  ]
 }
