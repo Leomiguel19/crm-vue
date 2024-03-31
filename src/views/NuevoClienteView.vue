@@ -37,7 +37,7 @@
 <template>
     <div>
         <div class="flex justify-end">
-            <RouterLink to="inicio">
+            <RouterLink to="listado-clientes">
                 regresar
             </RouterLink>
         </div>
@@ -83,8 +83,8 @@
                         type="text"
                         label="Teléfono"
                         name="telefono"
-                        placeholder="Teléfono: +XX XXX-XXX-XXX"
-                        validation="?matches:/^[+][0-9]{2} [0-9]{3}-[0-9]{3}-[0-9]{4}$/"
+                        placeholder="Teléfono: XXX-XXX-XXX"
+                        validation="?matches:/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/"
                         :validation-messages="{matches: 'El Formato no es valido'}"
                     />  
                     
