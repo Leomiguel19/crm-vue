@@ -1,6 +1,6 @@
 <script setup>
     // import {reactive} from 'vue'
-    import axios from "axios"
+    import axios from "../lib/axios"
     import { FormKit } from '@formkit/vue'
     import {useRouter, useRoute} from 'vue-router'
     import RouterLink from "../components/UI/RouterLink.vue"
@@ -25,7 +25,7 @@
     // })
 
     const handleSubmit = (data) => {
-        axios.post('http://localhost:4000/clientes', data)
+        axios.post('/clientes', data)
             .then(response => {
                 // Redireccionar
                 router.push({name: 'inicio'})
